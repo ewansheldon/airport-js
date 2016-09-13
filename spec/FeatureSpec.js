@@ -10,7 +10,8 @@ describe('Feature test', function() {
   });
 
   it("planes can land at airport", function() {
-    plane.land(airport);
+    airport.land(plane);
+    console.log(this.containedPlanes)
     expect(airport.planes()).toContain(plane);
   });
 });

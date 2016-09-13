@@ -1,7 +1,7 @@
 'use strict';
 
 function Plane() {
-  this._status = false
+  this._status = false;
 }
 
 Plane.prototype = {
@@ -10,6 +10,6 @@ Plane.prototype = {
   },
 
   changeStatus: function() {
-    this._status = !this.status()
+    this._status = !this.status();
   }
 };

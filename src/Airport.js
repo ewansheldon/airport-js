@@ -1,7 +1,8 @@
 // 'use strict';
-
-function Airport(){
+// var weatherClass = new Weather();
+function Airport(weatherClass){
   this.containedPlanes = [];
+  this.weather = weatherClass || new Weather();
 }
 
 Airport.prototype.planes = function(){
@@ -9,6 +10,9 @@ Airport.prototype.planes = function(){
 };
 
 Airport.prototype.land = function(aPlane) {
-  this.containedPlanes.push(aPlane)
-  
+  if (!this.weather.isStormy()) {
+    this.containedPlanes.push(aPlane);
+  } else {
+    console.log('string')
+  }
 };

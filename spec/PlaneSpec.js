@@ -11,9 +11,11 @@ describe('plane', function() {
   });
 
   it('is initially not landed', function() {
-    expect(plane.isLanded()).toEqual(false);
+    expect(plane.status()).toEqual(false);
   });
-  // it('can land planes', function() {
-  //   expect(plane.land).not.toBeUndefined();
-  // });
+
+  it('changes is status to landed', function() {
+    plane.changeStatus();
+    expect(plane.status()).toEqual(true);
+  });
 });
